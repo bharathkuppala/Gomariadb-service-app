@@ -26,7 +26,7 @@ DSN: bharath:password@tcp(localhost:3306)/mariadb_test?checkConnLiveness=false&p
         2. bin/zookeeper-server-start.sh config/zookeeper.properties ---> to start zookeeper
         3. bin/cmak -Dconfig.file=conf/application.conf -Dhttp.port=9000 ----> to start kafka manager(gui)
 
-## Commands need to be execute to run services inside container
+## Commands needs to be executed to run services inside container
         1. docker-compose up -d ----> for background mode
         2. docker-compose up ----> for foreground mode
 
