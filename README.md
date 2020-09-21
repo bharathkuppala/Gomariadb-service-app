@@ -1,7 +1,8 @@
 # Gomariadb service app 
 golang web app which use gorm as ORM and mariadb as underlying database. Publishes messages to kafka topic whenever there is an event.
 
-# endpoint : http://localhost:8080/api/v1/register
+# endpoints : 
+        http://localhost:8080/api/v1/register
         {
             "firstName" : "Bharath",
             "lastName" : "Kuppala",
@@ -11,7 +12,7 @@ golang web app which use gorm as ORM and mariadb as underlying database. Publish
             "userName": "Bharath Kuppala"
         }
 
-# endpoint :  http://localhost:8080/api/v1/login
+        http://localhost:8080/api/v1/login
         {
              "email" : "b@gmail.com",
              "password" : "pass"
