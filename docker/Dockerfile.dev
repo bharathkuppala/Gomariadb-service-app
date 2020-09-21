@@ -1,0 +1,26 @@
+
+FROM golang:1.15-alpine as build-dev
+
+RUN apk update && apk upgrade
+
+LABEL maintainer="Bharath Kuppala <bharathcruise15@gmail.com>"
+
+RUN mkdir /build
+
+WORKDIR /build
+
+COPY go.mod go.sum ./
+
+RUN go mod download
+
+COPY . .
+
+RUN go build -o ./build .
+
+FROM alpine
+
+COPY --from=build-dev /build .
+
+EXPOSE 8080
+
+CMD [ "/build" ]

@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  timeoutRead: 5s
+  timeoutWrite: 15s
+
+db:
+  host: mariadb-database
+  port: 3306
+  username: bharath
+  password: password
+  name: mariadb_test
+
+debug: true
