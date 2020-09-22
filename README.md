@@ -1,3 +1,5 @@
+#Gomariadb service app is a golang web app which use gorm as ORM and mariadb as underlying database. Publishes messages to kafka topic whenever there is an event.
+
 endpoint : http://localhost:8080/api/v1/register
 {
     "firstName" : "Bharath",
