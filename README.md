@@ -1,23 +1,24 @@
 #Gomariadb service app is a golang web app which use gorm as ORM and mariadb as underlying database. Publishes messages to kafka topic whenever there is an event.
 
-endpoint : http://localhost:8080/api/v1/register
-{
-    "firstName" : "Bharath",
-    "lastName" : "Kuppala",
-    "email" : "b@gmail.com",
-    "bloodGroup" : "B+",
-    "password" : "pass",
-    "userName": "Bharath Kuppala"
-}
+## endpoints : 
+    http://localhost:8080/api/v1/register
+    {
+        "firstName" : "Bharath",
+        "lastName" : "Kuppala",
+        "email" : "b@gmail.com",
+        "bloodGroup" : "B+",
+        "password" : "pass",
+        "userName": "Bharath Kuppala"
+    }
 
-endpoint :  http://localhost:8080/api/v1/login
-{
-     "email" : "b@gmail.com",
-     "password" : "pass"
-}
+    http://localhost:8080/api/v1/login
+    {
+         "email" : "b@gmail.com",
+         "password" : "pass"
+    }
 
-<!-- Just for reference -->
-DSN: bharath:password@tcp(localhost:3306)/mariadb_test?checkConnLiveness=false&parseTime=true&maxAllowedPacket=0
+## Just for reference
+    DSN: bharath:password@tcp(localhost:3306)/mariadb_test?checkConnLiveness=false&parseTime=true&maxAllowedPacket=0
 
 ## kafka commands (To run locally)
         1. JMX_PORT=8004 bin/kafka-server-start.sh config/server.properties ---> to start kafka
